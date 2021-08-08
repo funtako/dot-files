@@ -1,0 +1,4 @@
+type
+nmcli dev wifi list
+#to see a list of possible wifi connections.
+sudo nmcli --ask dev wifi connect <NAMEOFCONNECTION>
