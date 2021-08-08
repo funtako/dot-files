@@ -1,6 +1,6 @@
 slstatus &
-xmodmap ~/.xmodmap
-compton 
+xmodmap ~/.xmodmap &
+compton &
 redshift &
 nitrogen --restore &
 exec dwm
