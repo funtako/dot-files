@@ -1,0 +1,2 @@
+cat ~/.config/installedpackages.txt
+
