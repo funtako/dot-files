@@ -1,0 +1,6 @@
+sudo apt install tp-smapi-dkms
+sudo modprobe tp-smapi
+#verify with 
+lsmod | grep smapi
+#add module name to /etc/modules to make sure its autoloaded during boot:
+sudo echo tp-smapi >> /etc/modules
