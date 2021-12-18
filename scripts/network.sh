@@ -8,23 +8,27 @@ network() {
     wifi="$(ip a | grep wlp | grep inet | wc -l)"
 
 if [ $wire = 0 ]; then 
-    echo "  $(hostname -I | awk '{print $1}')" #nf-mdi-ethernet
+    echo " " #nf-mdi-ethernet
 elif [ $wifi = 1 ]; then
-    echo "直  $(hostname -I | awk '{print $1}')" #nf-mdi-wifi
+    echo "直" #nf-mdi-wifi
 else 
     echo "睊" #nf-mdi-wifi_off #nf-fa-exclamation
 fi
 }
 
 vpn() {
-        state="$(ip a | grep tun0 | grep inet | wc -l)"
+        state="$(ip a | grep wg-mullvad | grep inet | wc -l)"
+        vpnip="$(mullvad status | awk -F : '{print $2}' | awk '{print $4}')"
             
 if [ $state = 1 ]; then
-    echo "ﱾ"
+    echo "ﱾ" $vpnip #nf-mdi-shield_half_full #nf-mdi-emoticon_cool
 else
-    echo " "
+    echo ""
 fi
 }
+
+
+
 
 echo "$(network)$(vpn)" 
 
