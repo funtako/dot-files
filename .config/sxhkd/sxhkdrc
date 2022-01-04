@@ -5,7 +5,7 @@ super + r
 super + shift + w
       st -e sudo nmtui
 super + shift + g
-      (export DISPLAY=:0.0 && /bin/date && /usr/bin/nitrogen --set-zoom-fill --random ~/wallpapers --save) > /tmp/myNitrogen.log 2>&1
+      (export DISPLAY=:0.0 && /bin/date && /usr/bin/nitrogen --set-zoom-fill --random ~/pictures/wallpapers --save) > /tmp/myNitrogen.log 2>&1
 XF86AudioRaiseVolume
       amixer set Master 2%+
 XF86AudioLowerVolume
