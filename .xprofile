@@ -1,0 +1,40 @@
+
+export PATH=$PATH:$HOME/scripts
+export EDITOR="vim"
+export TERMINAL="st"
+export BROWSER="librewolf"
+
+#XDG Paths
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+#status bar
+slstatus &
+
+#keybinds
+sxhkd &
+
+#compositor
+compton &
+
+#blue light filter 
+redshift &
+
+#control music from command line
+mpDris2 &
+
+#musid player daemon
+mpd &
+
+#notifications
+dunst &  #lets you use notify-send notifications
+
+#swap caps lock and escape 
+setxkbmap -option caps:swapescape
+
+#restore last desktop background 
+nitrogen --restore &
+
+#zsh config dir
+export ZDOTDIR=$HOME/.config/zsh
