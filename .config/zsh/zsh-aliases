@@ -1,0 +1,7 @@
+#!/bin/sh
+alias v='vim'
+alias ls='ls -a'
+#add current date to clipboard
+alias journalentry='date | xclip -select clipboard'
+
+
