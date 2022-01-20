@@ -26,12 +26,16 @@ super + shift + h
       playerctl --player=mpd previous # && xsetroot -name "$(/usr/local/bin/songplaying.sh)"  
 super + shift + l
       playerctl --player=mpd next # && xsetroot -name "$(/usr/local/bin/songplaying.sh)"  
-control + l
-      playerctl --player=mpd position 5+
-control + j
-      playerctl --player=mpd position 5-
+#NEEED NEW KEYBINDS FOR THESE KEYS
+#control + l
+#      playerctl --player=mpd position 5+
+#control + j
+#      playerctl --player=mpd position 5-
+##############
 super + shift n
       notify-send "$(/usr/local/bin/songplaying.sh)"
       #xsetroot -name "$(/usr/local/bin/songplaying.sh)"  
 super + bar
       dunstctl close-all
+super + shift + F12 
+      slock
