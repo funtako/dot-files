@@ -60,9 +60,13 @@ tmp="$(mktemp)"
 
 # Key-bindings
 bindkey -s '^o' 'lfcd\n'
+
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
+#MAYBEDELETE THIS
 bindkey '^[[P' delete-char
 
 
-
+#Open new st terminal window in our current directory and doesn't block terminal keybind 
+###########~~CHANGE THE BINDING LATER TO A BETTER ONE 
+bindkey -s '^e' 'st > /dev/null 2>&1 & disown\n'
