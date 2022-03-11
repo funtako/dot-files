@@ -17,10 +17,11 @@ fi
 }
 
 vpn() {
-        state="$(ip a | grep wg-mullvad | grep inet | wc -l)"
+        vpnstate="$(ip a | grep wg-mullvad | grep inet | wc -l)"
+        vpnstatetun="$(ip a | grep tun0 | grep inet | wc -l)"
         vpnip="$(mullvad status | awk -F : '{print $2}' | awk '{print $4}')"
             
-if [ $state = 1 ]; then
+if [ $vpnstate = 1 ] || [ $vpnstatetun = 1 ]; then
     echo "ﱾ" $vpnip #nf-mdi-shield_half_full #nf-mdi-emoticon_cool
 else
     echo ""
