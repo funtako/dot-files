@@ -1,0 +1,41 @@
+super + w
+      brave-browser
+super + r
+      st -e htop
+super + shift + w
+      st -e sudo nmtui
+super + shift + g
+      (export DISPLAY=:0.0 && /bin/date && /usr/bin/nitrogen --set-zoom-fill --random ~/pictures/wallpapers --save) > /tmp/myNitrogen.log 2>&1
+XF86AudioRaiseVolume
+      amixer set Master 2%+
+XF86AudioLowerVolume
+      amixer set Master 2%-
+XF86AudioMute
+      amixer set Master toggle
+super + shift + s
+#      maim -s ~/Pictures/testtestestsetsetest
+      screenshotpart.sh
+Print
+      screenshotfull.sh
+#      maim ~/Pictures/testtesttesttesttest
+#gui=underline
+
+super + shift + p
+      playerctl --player=mpd play-pause
+super + shift + h
+      playerctl --player=mpd previous # && xsetroot -name "$(/usr/local/bin/songplaying.sh)"  
+super + shift + l
+      playerctl --player=mpd next # && xsetroot -name "$(/usr/local/bin/songplaying.sh)"  
+#NEEED NEW KEYBINDS FOR THESE KEYS
+#control + l
+#      playerctl --player=mpd position 5+
+#control + j
+#      playerctl --player=mpd position 5-
+##############
+super + shift + n
+      notify-send "$(/usr/local/bin/songplaying.sh)"
+      #xsetroot -name "$(/usr/local/bin/songplaying.sh)"  
+super + bar
+      dunstctl close-all
+super + shift + F12 
+      slock
