@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+#link to xprofile from this folder if not then just get it from home
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xprofile" ]; then
+    . "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xprofile"
+else
+    . "$HOME/.xprofile"
+fi
+
+
+dwm

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#status bar
+slstatus &
+
+#keybinds
+sxhkd &
+
+#compositor
+compton &
+
+#blue light filter 
+redshift &
+
+#control music from command line
+mpDris2 &
+
+#musid player daemon
+mpd &
+
+#notifications
+dunst &  #lets you use notify-send notifications
+
+#swap caps lock and escape 
+setxkbmap -option caps:swapescape
+
+#restore last desktop background 
+nitrogen --restore &
+
