@@ -14,9 +14,9 @@ XF86AudioMute
       amixer set Master toggle
 super + shift + s
 #      maim -s ~/Pictures/testtestestsetsetest
-      /usr/local/bin/screenshotpart.sh
+      screenshotpart.sh
 Print
-      /usr/local/bin/screenshotfull.sh
+      screenshotfull.sh
 #      maim ~/Pictures/testtesttesttesttest
 #gui=underline
 
