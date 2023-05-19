@@ -39,3 +39,11 @@ super + bar
       dunstctl close-all
 super + shift + F12 
       slock
+
+super + shift + x
+      prompt.sh "SHUTDOWN! Are you sure?" "sudo shutdown now"   
+
+super + shift + z
+      prompt.sh "REBOOT! Are you sure?" "sudo reboot"
+
+    
