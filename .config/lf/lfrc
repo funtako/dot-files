@@ -94,7 +94,6 @@ map '"'
 map d
 map c
 
-
 # Basic Functions
 map p paste
 map x cut
@@ -112,6 +111,9 @@ map gc cd ~/.config
 map gs cd ~/scripts
 map ch chmod
 
+# control c to quit
+map <c-c> quit
+
 # Fzf  Mapping
 map f fzf_jump
 
@@ -125,4 +127,5 @@ map au unarchive
 #map dd trash
 #map tc clear_trash
 #map tr restore_trash
+
 
