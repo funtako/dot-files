@@ -27,3 +27,17 @@ setxkbmap -option caps:swapescape
 #restore last desktop background 
 nitrogen --restore &
 
+
+#connect to vpn
+#mullvad connect
+#if there is an error with the vpn it will give us notification
+notify-send "mullvad $(mullvad status)" 
+
+#Startup sound
+STARTUP_SOUND="$HOME/.secretconfig/startupsound/ps1.mp3"
+if [ -f "$STARTUP_SOUND" ]; then
+    mpv "$STARTUP_SOUND" &
+else
+    notify-send -u critical "No startup sound at location $STARTUP_SOUND" &
+fi
+
