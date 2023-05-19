@@ -1,7 +1,51 @@
 #!/bin/sh
-alias v='vim'
-alias ls='ls -a'
+alias v='$EDITOR'
+alias vim='nvim'
 #add current date to clipboard
 alias journalentry='date | xclip -select clipboard'
+alias yout='$HOME/scriptsmore/ytdlvideodownload.sh'
+#maybe get a script so I then won't have to put the link in quotes in the terminal 
+#alias yta='yt-dlp -o "$MUSIC_DIR/needmetadata/%(title)s.%(ext)s" --extract-audio --audio-format mp3 -f bestaudio' 
+alias yta='yt-dlp -o "$MUSIC_DIR/needmetadata/%(title)s.%(ext)s" --extract-audio --audio-format mp3 -f bestaudio' 
+alias spot='spotdl -o "$MUSIC_DIR/spotdl" '
+
+# Colorize commands when possible.
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls -h --color=auto --group-directories-first'
+fi
+alias grep="grep --color=auto" 
+alias diff="diff --color=auto"
 
 
+# ls aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias lla='ls -la'
+
+alias cp="cp -iv" 
+alias mv="mv -iv" 
+alias rm="rm -vI" 
+alias mkd="mkdir -pv" 
+
+
+#public ip address
+#Curling stuff into bash could be dangerous in case site gets hacked and they put malicious code in there
+#alias whatip='curl ifconfig.me/ip'
+
+#update
+alias sau='echo sudo apt update && sudo apt update && echo \\n \\napt list --upgradeable \\n  && apt list --upgradeable'
+alias sauy='echo sudo apt upgrade -y && sudo apt upgrade -y'
+alias pyu='pip list --outdated' #check which python packages need to be updated #takes a long time python is slow
+alias pyuy='pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U && pipx upgrade-all' # update all python packages And the packages install with pipx virtual container
+
+#non default config file locations
+alias abook='abook --datafile $XDG_SECRET_CONFIG_HOME/abook/addressbook'
+#sync all email with mbsync
+#alias sync='mbsync --config $XDG_SECRET_CONFIG_HOME/mbsync/mbsyncrc -a'
+alias sync="$HOME/scriptsmore/neomuttemailscripts/mailsync.sh"
+
+#DELETELATER
+alias sdn='echo sudo shutdown now && prompt.sh "Do you want to shutdown now?" "sudo shutdown now" '
+alias srn='echo sudo reboot && prompt.sh "Do you want to reboot?" "sudo reboot" '
