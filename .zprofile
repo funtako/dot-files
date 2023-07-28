@@ -1,6 +1,6 @@
 #Default programs
 #$HOME/.local/bin is where python pip installs to
-export PATH=$PATH:$HOME/programming/scripts:$HOME/.local/bin:/usr/local/go/bin
+export PATH=$PATH:$HOME/programming/shell-scripts/scripts:$HOME/.local/bin:/usr/local/go/bin
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="brave-browser"
@@ -11,7 +11,7 @@ export XDG_SECRET_CONFIG_HOME=$HOME/.secretconfig
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export HISTORY_LOCATION=$HOME/.zsh_history
-export SCRIPTS_LOC=$HOME/scripts
+export SCRIPTS_LOC=$HOME/programming/shell-scripts
 export MUSIC_DIR=$HOME/music
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/X11/xinitrc"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
